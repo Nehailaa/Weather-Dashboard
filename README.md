@@ -45,8 +45,13 @@ OpenWeather API
 Bootstrap
 
 
-The URL of the functional and deployed application:
+The URL of the functional and deployed application: 
+https://nehailaa.github.io/Weather-Dashboard/
 
 The URL of the GitHub repository:
 https://github.com/Nehailaa/Weather-Dashboard
 
+
+
+Made with ♥️ 
+* NAB *
