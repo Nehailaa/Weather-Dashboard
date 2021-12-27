@@ -83,7 +83,7 @@ function pageInitial() {
                             element4Forecast[i].append(forecastDateEl);
 
                             // Set the varibale for the Icon of the current weather
-                            let forecastWeatherEl = document.createElement("img");
+                            let weatherForecastElement = document.createElement("img");
                             weatherForecastElement.setAttribute("src", "https://openweathermap.org/img/wn/" + répondre.data.list[forecastIndex].weather[0].icon + "@2x.png");
                             weatherForecastElement.setAttribute("alt", répondre.data.list[forecastIndex].weather[0].description);
                             element4Forecast[i].append(weatherForecastElement);
@@ -104,21 +104,21 @@ function pageInitial() {
         searchWeather(searchWord);
         searchHistory.push(searchWord);
         localStorage.setItem("search", JSON.stringify(searchHistory));
-        searchHistory();
+        searchHistoryRender();
     })
 
     // Then Clear History button
     clearEl.addEventListener("click", function () {
         localStorage.clear();
         searchHistory = [];
-        searchHistory();
+        searchHistoryRender();
     })
 
     function k2f(K) {
         return Math.floor((K - 273.15) * 1.8 + 32);
     }
 
-    function searchHistory() {
+    function searchHistoryRender() {
         historyEl.innerHTML = "";
         for (let i = 0; i < searchHistory.length; i++) {
             let historyWordItem = document.createElement("input");
@@ -133,7 +133,7 @@ function pageInitial() {
         }
     }
 
-    searchHistory();
+    searchHistoryRender();
     if (searchHistory.length > 0) {
         searchWeather(searchHistory[searchHistory.length - 1]);
     }
