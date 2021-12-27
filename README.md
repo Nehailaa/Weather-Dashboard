@@ -1,15 +1,21 @@
 # Weather-Dashboard
 
 Description:
+
+
    Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own.
    A great web application that allows users to search for a city to get the current weather with a 5 day forecast. Cities that users previously looked up will be saved in their local storage.
 
 User Story:
+
+
     AS A traveler;
     I WANT to see the weather outlook for multiple cities
     SO THAT I can plan a trip accordingly.
 
  Acceptance Criteria:
+
+
 - GIVEN a weather dashboard with form inputs;
 -WHEN I search for a city
 -THEN I am presented with current and future conditions for that city and that city is added to the search history.
@@ -24,9 +30,12 @@ User Story:
    
 
 Mock-Up:
+
 <img src="Assets/Images/Mock-Up.jpg" alt="Mock-up pf the project" />
 
 Technologies Used:
+
+
 OpenWeather API
 Bootstrap
 
