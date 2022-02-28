@@ -1,69 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
-<body>
 
-    <header class="container-fluid text-center text-white bg-dark p-2">
+<body>
+    <header class="container-fluid text-center text-white bg-info bg-gradient">
         <h1>Weather Dashboard</h1>
     </header>
 
-    <div class="container-fluid">
+    <main class="container-fluid">
         <div class="row">
-            <div class="col-lg-3 bg-light">
-                <h5 class="mt-1">Search for a City:</h5>
-                <div class="input-group mb-3">
-                    <input id="enter-city" type="text" class="form-control" placeholder="Enter a City" aria-label="Enter a city">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button" id="search-button">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-                <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
-                <form id="history"></form>
+            <div class="col-12 col-md-3 p-2 search-column">
+                <form class="border p-2" id="city-search-form">
+                    <h3>Search for a City</h3>
+                    <input id="city" type="text" autofocus="true" class="form-input" />
+                    <button class="btn btn-info" type="submit">Search</button>
+                </form>
+                <div class="past-search border" id="pastSearch-buttons"></div>
             </div>
-            <div class="col-lg-9">
-                <div class="row mr-0">
-                    <div class="col-lg-11 card m-3 d-none" id="today-weather">
-                        <div class="card-body">
-                            <h3 id="city-name" class="city-name align-middle"></h3>
-                            <img id="present-pic" alt="">
-                            <p id="temperature"></p>
-                            <p id="humidity"></p>
-                            <p id="wind-speed"></p>
-                            <p id="UV-index"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row d-none" id="fiveday-header">
+            <div class="col-12 col-md-9">
+                <div class="row border selected-city" id="current-forecast">
                     <div class="col-12">
-                        <h3>5-Day Forecast</h3>
+                        <h2 id="searched-city">Current Weather:</h2>
+                        <div id="weather-container" class="list-group"></div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-primary text-white m-2 rounded"></div>
+                <div class="row border five-day-forecast" id="five-day-forecast">
+                    <h3 class="col-12" id="forecast">Five Day Forecast:</h3>
+                    <div class="d-flex" id="fiveday-container"></div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+
+    <footer>
+        <p>Made With ❤ By <a href="https://github.com/Nehailaa">NAB</a></p>
+    </footer>
 
 
- <!-- jQuery first, then Popper.js, then Bootstrap JS -->
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
- <script src="Assets/script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="./Assets/script.js"></script>
 </body>
+
 </html>

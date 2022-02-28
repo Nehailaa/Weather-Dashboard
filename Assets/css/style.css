@@ -1,0 +1,39 @@
+.search-column {
+    background-color: darkgray;
+}
+
+.list-group-item {
+    line-height: 0.75;
+    border: none;
+}
+
+.five-day-forecast{
+    padding-top: 20px;
+}
+
+.card-body {
+    flex:auto;
+    background-color: skyblue;
+}
+
+span.favorable {
+    padding: 3px;
+    background-color: green;
+    color:white;
+}
+
+span.moderate {
+    padding: 3px;
+    background-color: yellow;
+}
+
+span.severe {
+    padding: 3px;
+    background-color: red;
+    color:white;
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+}

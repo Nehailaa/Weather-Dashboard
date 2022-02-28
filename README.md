@@ -36,11 +36,12 @@ User Story:
 
 Mock-Up:
 
-<img src="Assets/Images/Mock-Up.jpg" alt="Mock-up pf the project" />
+<img src="Assets/Images/Mock-Up.png" alt="Mock-up pf the project" />
 
 Technologies Used:
 
-
+HTML
+CSS
 OpenWeather API
 Bootstrap
 
@@ -52,6 +53,8 @@ The URL of the GitHub repository:
 https://github.com/Nehailaa/Weather-Dashboard
 
 
+  ## Additional Information
+  ✉️` Contact me with any questions`: [Email](mailto:nehailakarmel@gmail.com) , [GitHub](https://github.com/Nehailaa)<br />
 
 Made with ♥️ 
 * NAB *
