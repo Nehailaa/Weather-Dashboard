@@ -40,10 +40,10 @@ Mock-Up:
 
 Technologies Used:
 
-HTML
-CSS
-OpenWeather API
-Bootstrap
+`HTML`
+`CSS`
+`OpenWeather API`
+`Bootstrap`
 
 
 The URL of the functional and deployed application: 
